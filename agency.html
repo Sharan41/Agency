@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyAgency</title>
+    <link rel="icon" href="./images/Logo.jpg">
+    <style>
+       html, body {
+     
+      margin: 0;
+      padding: 0;
+     
+    }
+
+   
+
+        nav{
+            height: 60px;
+            width: 100%;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            left: 0;
+          
+            
+          
+            
+        }
+       
+        nav a{
+            color:white;
+            text-decoration: none;
+            padding: 20px;
+            display: inline-block;
+            
+        }
+        nav a:hover{
+            background-color: lightgray;
+            transition: background-color 0.3s ease;
+            color: #000;
+            cursor: pointer;
+        }
+        .d1{
+            float: right;
+        }
+       
+        body{
+            margin:0px;
+            padding: 0px;
+        }
+        
+        .header{
+          
+            color: white;
+            text-align: center;
+           margin-left: 100px;
+            float: left;
+        }
+       
+
+        .container{
+            width: 100%;
+           
+            display: flex;
+           
+         align-items: center;
+            flex-direction: column;
+            
+        }
+        .image{
+            width: 300px;
+            height: 200px;
+            margin-top: 20px;
+            
+           
+        }
+        .image img{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            transform-style: preserve-3d;
+           
+            animation: newEffect 2s infinite alternate;
+        }
+        @keyframes 
+            
+        newEffect{
+            0%{
+                transform: rotateY(0deg);
+            }
+            100%{
+                transform: rotateY(360deg);
+            }
+        }
+
+        .description{
+            width: 80%;
+            height: auto;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+       
+        .text{
+            text-align: center;
+            margin-top: 100px;
+            font-size: 30px;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            
+        }
+        .animate-bounce{
+            
+           
+            animation: bounceEffect 1s  infinite alternate;
+        }
+        @keyframes bounceEffect{
+            from{
+                transform: translateY(0px);
+            }
+            to{
+               transform: translateY(-30px);
+            }
+        }
+          img{
+            max-width: 100%;
+            height: auto;
+        }
+        .image1{
+            width: 70%;
+            height: 500px;
+            margin: 50px auto;
+            
+        }
+         .image1 img{
+            width: 100%;
+            height: auto
+
+        }
+         .image1 img:hover{
+            transform: scale(1.05);
+            filter: brightness(130%);
+            transition: transform 0.3s ease-in-out
+
+                  }  
+        .image1 img{
+            border-radius: 20px;
+        }
+        body{
+           
+             background-image: radial-gradient(75% 100% at 100% 100%, rgba(0, 60, 255, 0.6) 0%, black 100%);
+            
+            
+            
+        }
+        
+
+        
+        .scrolling{
+        
+            width: 100%;
+            margin-top: 100px;
+            margin-bottom: -100px;
+            height: 100px;
+            margin-right: -200px;
+            overflow: hidden;
+           
+
+        }
+         @keyframes moveRight{
+            from{
+               transform: translate(0%);
+            }
+            to{
+                transform: translate(-300%);
+            }
+        }
+        .scroll{
+            width: 200px;
+            animation: moveRight 5s  infinite linear;
+            display: flex;
+            flex-direction: row;
+        }
+        .scroll img{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        
+        div.polaroid{
+            width: 300px;
+            height: 400px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            margin-bottom: 25px;
+          
+
+
+        }
+        div.polaroid:hover{
+            transform: scale(1.05);
+            filter: brightness(130%);
+            transition: transform 0.3s ease-in-out;
+        }
+        div.polaroid img{
+            width: 100%;
+            height: 300px;
+              border-radius: 20px;
+           
+        }
+        .container1{
+           
+            color: white;
+            padding: 10px 20px;
+        }
+        .multi-column{
+            column-count: 4;
+            column-width: 300px;
+            column-gap: 16px;
+           margin-top: 250px;
+            margin-left: 100px;
+            
+            
+        }
+         footer{
+            height:60px;
+            width:100%;
+        color: white;
+        background-color: black;
+            text-align: center;
+            line-height: 60px;
+           
+          margin-bottom: -30px;
+          margin-right: -40px;
+         }
+.circle-wrapper {
+  width: 94px;
+  height: 94px;
+  background: linear-gradient(45deg, #1004e7, #0af0fc);
+  background-size: 200% 200%; /* Enable smooth animation */
+  border-radius: 50%;
+  position: absolute;
+  left: 200px;
+  top: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: gradient 1s ease infinite;
+}
+.circle-inner:hover{
+    background: linear-gradient(45deg, #1004e7, #0af0fc);
+    cursor: pointer;
+    transition: 1s all ease;
+    animation: gradient 1s ease infinite;
+     background-size: 200% 200%; 
+     width: 94px;
+  height: 94px;
+
+}
+.circle-inner2:hover{
+    background: linear-gradient(45deg, #1004e7, #0af0fc);
+    cursor: pointer;
+    transition: 1s all ease;
+    animation: gradient 1s ease infinite;
+     background-size: 200% 200%; 
+     
+
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.circle-inner {
+  width: 88px;
+  height: 88px;
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle-wrapper2 {
+  width: 94px;
+  height: 94px;
+  background: linear-gradient(45deg, #1004e7, #0af0fc);
+  background-size: 200% 200%; /* Enable smooth animation */
+  border-radius: 50%;
+  position: absolute;
+  right: 200px;
+  top: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: gradient 2s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.circle-inner2 {
+  width: 88px;
+  height: 88px;
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  
+}
+
+.footer-container .symbol,
+.footer-container .links,
+.footer-container .icons {
+  margin: 10px;
+  cursor: pointer;
+}
+
+
+.footer-container .links a {
+  margin-right: 25px;
+  text-decoration: none;
+  color: white;
+}
+@media screen and (max-width: 600px) {
+  .multi-column {
+    column-count: 1; 
+    margin-left: 50px;
+   
+
+}
+.scrolling{
+    height:60px;
+}
+  .container{
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .container .text{
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .container .text h1{
+margin-bottom:20px;
+  }
+
+    .image{
+        width: 100%;
+        height: auto;
+        margin-top: 75px;
+    }
+    .circle-wrapper{
+       top:300px;
+       left: 250px;
+    }
+    .circle-wrapper2{
+        top:300px;
+        right: 250px;
+    }
+    .image1{
+        width: 100%;
+        height: auto;
+    }
+    .image1 img{
+        width: 100%;
+        height: auto;
+    }
+  nav a {
+    display: block; 
+    margin: 5px 0;
+  }
+  .d1 {
+    float: none; 
+    text-align: center;
+  }
+  .header {
+    margin-left: 0; 
+    text-align: center; 
+    float: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+    nav{
+    height: 350px;
+    position: relative;
+    font-size: 12px;
+  }
+   .footer-container .symbol,
+.footer-container .links a,
+.footer-container .icons {
+ margin: 0px auto;
+}
+.footer-container .links a {
+  display: block;
+}
+.footer-container{
+    flex-direction: column;
+}
+  
+    
+}
+
+
+       
+    </style>
+</head>
+<body>
+    <script>
+        var i=0;
+        var image=[];
+        var time=4000;
+        image[1]="./images/bg2.avif";
+        image[0]="./images/bg.png";
+        function slideshow(){
+            document.slide.src=image[i];
+            if(i<image.length-1){
+                i++;
+            }
+            else{
+                i=0;
+            }
+            setTimeout("slideshow()",time);
+
+        }
+        window.onload=slideshow;
+    </script>
+   
+    <nav >
+       
+       
+         
+  <div class="header">
+    <img src="./images/Logo.jpg" height="20px" width="50px" alt="">
+    <h1 style="float: right;margin-left: 20px;"> MyAgency</h1>
+  </div>
+
+
+       
+        <div class="d1">
+             <a href="agency.html">HOME</a><a href="service.html">SERVICES</a><a href="about.html">ABOUT US</a><a href="resources.html">RESOURCES</a><a href="contact.html">CONTACT US</a>
+            
+            
+        </div>
+
+        
+    </nav>
+    
+    <div class="container animate-bounce">
+       <div class="text">
+            <h1>Welcome to MyAgency</h1>
+            <p style="font-weight: 400;">Hire Self-Learning AI Agents to Run Your Operations</p>
+        </div>
+        <div class="image">
+            <img src="./images/automation.png" alt="Agency Image">
+        </div>
+        <a href="https://blogs.nvidia.com/blog/what-is-agentic-ai/" target="_blank">
+    <div class="circle-wrapper">
+  <div class="circle-inner"> Agentic AI</div>
+</div>
+</a>
+
+ <a href="https://www.conchovalleyhomepage.com/business/press-releases/globenewswire/9449273/the-six-five-summit-ai-unleashed-2025-explores-the-future-of-artificial-intelligence/ " target="_blank">
+<div class="circle-wrapper2">
+  <div class="circle-inner2"> AI Unleashed</div>
+</div>
+</a>
+        
+    </div>
+   
+
+    <div class="image1">
+        <img  name="slide" alt="">
+    </div>
+    <div class="scrolling">
+ 
+    <div class="scroll">
+    <img src="./images/scroll1.png" >
+    <img src="./images/scroll2.png" >
+<img src="./images/scroll3.png" >
+<img src="./images/scroll4.png" >
+<img src="./images/scroll5.png" >
+<img src="./images/scroll6.png" >
+
+
+    
+<img src="./images/scroll3.png" >
+<img src="./images/scroll4.png" >
+<img src="./images/scroll5.png" >
+<img src="./images/scroll6.png" >
+<img src="./images/scroll7.png" >
+</div>
+    
+        
+
+ </marquee></h1>
+    </div>
+    
+    <div class="multi-column">
+    
+     <div class="polaroid">
+        <img src="./images/card.webp" alt="" style="width: 100%;">
+        <div class="container1">
+            <p>Customer Service</p>
+
+        </div>
+    </div>
+    <div class="polaroid">
+        <img src="./images/card2.avif" alt="" style="width: 100%;">
+        <div class="container1">
+            <p>Data Extraction</p>
+
+        </div>
+    </div>
+    <div class="polaroid">
+        <img src="./images/card3.avif" alt="" style="width: 100%;">
+        <div class="container1">
+            <p>Communication</p>
+
+        </div>
+    </div>
+    <div class="polaroid">
+        <img src="./images/card4.webp" alt="" style="width: 100%;">
+        <div class="container1">
+            <p>Document Review</p>
+
+        </div>
+    </div>
+
+    </div>
+
+     <footer>
+        <div class="footer-container">
+            <div class="symbol" style="display: flex;align-items: center;">
+                <img src="./images/Logo.jpg"  height="20px" width="50px" alt="">
+                <h1 > MyAgency</h1>
+               
+    
+    
+    
+            </div>
+            
+            <div class="links">
+                  <a href="agency.html">HOME</a><a href="service.html">SERVICES</a><a href="about.html">ABOUT US</a><a href="resources.html">RESOURCES</a><a href="contact.html">CONTACT US</a>
+            </div>
+            <div class="icons">
+                <img  style="margin-left: 15px;" src="./images/icon1.webp" height="65px" width="65px" alt="">
+                <img  style="margin-left: 15px;" src="./images/icon2.svg" height="65px" width="65px" alt="">
+                 <img  style="margin-left: 15px;" src="./images/icon3.png" height="65px" width="65px" alt="">
+            </div>
+        </div>
+        <p>&copy; MyAgency. All rights reserved 2025
+</p>
+    </footer>
+</body>
+</html>

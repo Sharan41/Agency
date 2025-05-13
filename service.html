@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="icon" href="./images/services.png">
+</head>
+<style>
+    .card-container{
+            cursor: pointer;
+            height: 250px;
+            position: relative;
+            width: 250px;
+            margin: 20px;
+        }
+        .card{
+            height:100%;
+            position:absolute;
+            transform-style: preserve-3d;
+            transition: all 1s ease-in-out;
+            width:100%;
+        }
+        .card:hover{
+            transform: rotateY(180deg);
+        } 
+        .card .side{
+            backface-visibility: hidden;
+            border-radius: 6px;
+            height: 100%;
+            width:100%;
+            overflow: hidden;
+            position: absolute;
+        }
+       .card .side img {
+      width: 100%;
+      height: 100%;
+      opacity: 0.8;
+      object-fit: cover;
+    }
+    
+        .card .back{
+            background: black;
+            color: white;
+          
+     
+          
+            
+          
+           
+            transform: rotateY(180deg);
+            
+
+        }
+        .circle-wrapper2 {
+  width: 94px;
+  height: 94px;
+  background: linear-gradient(45deg, #1004e7, #0af0fc);
+  background-size: 200% 200%; /* Enable smooth animation */
+  border-radius: 50%;
+  position: absolute;
+  right: 200px;
+  top: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: gradient 2s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.circle-inner2 {
+  width: 88px;
+  height: 88px;
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+        .center{
+            text-align: center;
+           display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            font-size: 15px;
+            color:white;
+        }
+        body{
+           
+             background-image: radial-gradient(75% 100% at 100% 100%, rgba(0, 60, 255, 0.8) 0%, black 100%);
+             background-attachment: fixed;
+             background-size: cover;
+            
+            
+            
+        }
+        nav{
+            height: 60px;
+            width: 100%;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            left: 0;
+          
+            
+          
+            
+        }
+       
+        nav a{
+            color:white;
+            text-decoration: none;
+            padding: 20px;
+            display: inline-block;
+        }
+        nav a:hover{
+            background-color: lightgray;
+            transition: background-color 0.3s ease;
+            color: #000;
+            cursor: pointer;
+        }
+        .d1{
+            float: right;
+        }
+       
+        .header{
+          
+            color: white;
+            text-align: center;
+           margin-left: 100px;
+            float: left;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+       
+        .topleft{
+            position: absolute;
+            top: 50%;
+            left:10%;
+            font-size: 20px;
+            color: white;
+        }
+        footer{
+            height:fit-content;
+            width:100%;
+        color: white;
+        background-color: black;
+            text-align: center;
+            line-height: 60px;
+           
+            margin-bottom: -30px;
+            margin-left: 10px;
+        }
+        .row1{
+            margin-top: 80px;;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+        #bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  
+}
+
+.footer-container .symbol,
+.footer-container .links,
+.footer-container .icons {
+  margin: 10px;
+   cursor: pointer;
+}
+
+
+.footer-container .links a {
+  margin-right: 25px;
+  text-decoration: none;
+  color: white;
+}
+@media screen and (max-width: 600px) {
+    .footer-container .symbol,
+.footer-container .links a,
+.footer-container .icons {
+ margin: 0px auto;
+}
+.footer-container .links a {
+  display: block;
+}
+.footer-container{
+    flex-direction: column;
+}
+
+  .row1{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+   
+    margin-left: 50px;
+  }
+  nav a {
+    display: block; 
+    margin: 5px 0;
+  }
+  .d1 {
+    float: none; 
+    text-align: center;
+  }
+ .header {
+    margin-left: 0; 
+    text-align: center; 
+    float: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+   nav{
+    height: 350px;
+    position: relative;
+    font-size: 12px;
+  }
+  
+    
+}
+
+        
+</style>
+<body>
+
+    <nav >
+       
+       
+              <div class="header">
+    <img src="./images/Logo.jpg" height="20px" width="50px" alt="">
+    <h1 style="float: right;margin-left: 20px;"> MyAgency</h1>
+  </div>
+       
+        <div class="d1">
+             <a href="agency.html">HOME</a><a href="service.html">SERVICES</a><a href="about.html">ABOUT US</a><a href="resources.html">RESOURCES</a><a href="contact.html">CONTACT US</a>
+            
+            
+        </div>
+
+    </nav>
+    <video autoplay muted loop playsinline id="bg-video">
+    <source src="./video/vecteezy_space-flight-above-earth-4k_21570538.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+
+    <div class="main">
+   
+    <div class="row1">
+     <div class="card-container">
+        <div class="card">
+            <div class="side">
+                <img src="./images/card2.avif" alt="">
+                <div class="topleft">Customer Service Agent</div>
+            </div>
+           
+            <div class="side back center">The Customer Service AI Agent manages a broad range of customer inquiries via email and chat, enhancing the responsiveness of customer service departments across e-commerce, telecom, healthcare, travel, and financial services.
+
+Create agent</div>
+
+        </div>
+    </div>
+<div class="card-container">
+        <div class="card">
+            <div class="side">
+                <img src="./images/card2.avif" alt="">
+                <div class="topleft">Data Extraction Agent </div>
+            </div>
+            <div class="side back center">The Data Extraction AI Agent is designed to automatically extract information from various types of documents and standardize the format, such as for sales orders or invoices. </div>
+        </div>
+    </div>
+<div class="card-container">
+        <div class="card">
+            <div class="side">
+                <img src="./images/card2.avif" alt="">
+                <div class="topleft">Email Triage Agent</div>
+            </div>
+            <div class="side back center">The Email Triage AI Agent automates the process of sorting incoming emails into categories and prioritizing them.</div>
+        </div>
+    </div>
+<div class="card-container">
+        <div class="card">
+            <div class="side">
+                <img src="./images/card2.avif" alt="">
+                <div class="topleft">Interview Scheduler Agent</div>
+            </div>
+            <div class="side back center">The Interview Scheduler AI Agent automates the process of coordinating interviews, helping recruitment teams manage candidate and hiring team schedules effectively.</div>
+        </div>
+    </div>
+<div class="card-container">
+        <div class="card">
+            <div class="side">
+                <img src="./images/card2.avif" alt="">
+                <div class="topleft">Insurance Claim Agent</div>
+            </div>
+            <div class="side back center">The Insurance Claim AI Agent automates the insurance claim process by managing email communications, verifying claim details, assessing incidents according to established guidelines, and preparing responses to claimants. </div>
+        </div>
+    </div>
+
+    </div>
+    <div class="row1">
+     <div class="card-container">
+        <div class="card">
+            <div class="side">
+                <img src="./images/card2.avif" alt="">
+                <div class="topleft">Billing Support Agent</div>
+            </div>
+            <div class="side back center">The Billing Support AI Agent automates billing operations, including invoice generation, payment tracking, and reporting, helping businesses across industries like SaaS, utilities, and retail in their financial workflows.</div>
+        </div>
+    </div>
+<div class="card-container">
+        <div class="card">
+            <div class="side">
+                <img src="./images/card2.avif" alt="">
+                <div class="topleft">Inventory Management Agent</div>
+            </div>
+            <div class="side back center">The Inventory Management Assistant automates order fulfillment, catalog entry, inventory checks, and product information curation. </div>
+        </div>
+    </div>
+<div class="card-container">
+        <div class="card">
+            <div class="side">
+                <img src="./images/card2.avif" alt="">
+                <div class="topleft">Budget Management Agent</div>
+            </div>
+            <div class="side back center">The Budget Management AI Agent assists businesses in creating, monitoring, and adjusting budgets by automating expense tracking, forecasting, and financial reporting.</div>
+        </div>
+    </div>
+<div class="card-container">
+        <div class="card">
+            <div class="side">
+                <img src="./images/card2.avif" alt="">
+                <div class="topleft">Compilance Monitoring Agent</div>
+            </div>
+            <div class="side back center">The Compliance Monitoring AI Agent continuously tracks organizational activities to ensure adherence to regulations and internal policies, helping businesses mitigate risks and maintain accountability.</div>
+        </div>
+    </div>
+<div class="card-container">
+        <div class="card">
+            <div class="side">
+                <img src="./images/card2.avif" alt="">
+                <div class="topleft">Healthcare Agent</div>
+            </div>
+            <div class="side back center">The Healthcare AI Agent is tailored to support healthcare organizations by enhancing operational efficiency and improving patient interactions.</div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+      <footer>
+        <div class="footer-container">
+            <div class="symbol" style="display: flex;align-items: center;">
+                <img src="./images/Logo.jpg"  height="20px" width="50px" alt="">
+                <h1 > MyAgency</h1>
+               
+    
+    
+    
+            </div>
+            
+            <div class="links">
+                  <a href="agency.html">HOME</a><a href="service.html">SERVICES</a><a href="about.html">ABOUT US</a><a href="resources.html">RESOURCES</a><a href="contact.html">CONTACT US</a>
+            </div>
+            <div class="icons">
+                <img  style="margin-left: 15px;" src="./images/icon1.webp" height="65px" width="65px" alt="">
+                <img  style="margin-left: 15px;" src="./images/icon2.svg" height="65px" width="65px" alt="">
+                 <img  style="margin-left: 15px;" src="./images/icon3.png" height="65px" width="65px" alt="">
+            </div>
+        </div>
+        <p>&copy; MyAgency. All rights reserved 2025
+</p>
+    </footer>
+    
+    
+</body>
+</html>

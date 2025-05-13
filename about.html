@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="icon" href="./images/about .png">
+    <style>
+         body{
+           
+             background-image: radial-gradient(75% 100% at 100% 100%, rgba(0, 60, 255, 0.8) 0%, black 100%);
+             background-attachment: fixed;
+             background-size: cover;
+            
+            
+            
+        }
+        
+   
+
+        nav{
+            height: 60px;
+            width: 100%;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            left: 0;
+          
+            
+          
+            
+        }
+       
+        nav a{
+            color:white;
+            text-decoration: none;
+            padding: 20px;
+            display: inline-block;
+        }
+        nav a:hover{
+            background-color: lightgray;
+            transition: background-color 0.3s ease;
+            color: #000;
+            cursor: pointer;
+        }
+        .d1{
+            float: right;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+       
+       
+         .header{
+          
+            color: white;
+            text-align: center;
+           margin-left: 100px;
+            float: left;
+        }
+        .head{
+            text-align: center;
+            margin-top: 100px;
+            color:white;
+            font-size: 30px;
+            font-weight: bold;
+           
+            text-shadow: 2px 2px 4px #000000;
+        }
+        .tooltip{
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-block;
+            
+            color: white;
+        }
+        .tooltip .tooltiptext{
+            visibility: hidden;
+           
+            color: white;
+            width: 220px;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            /*position the tooltip*/
+            position: absolute;
+            z-index: 1;
+            top:-15px;
+            right:110%;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        .tooltip .tooltiptext::after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color:  transparent  transparent transparent white;
+
+
+
+        }
+        .tooltip:hover .tooltiptext{
+            visibility: visible;
+            opacity: 1;
+        }
+
+
+
+         .tooltip3{
+            position: relative;
+            
+           left: 30%;
+            display: inline-block;
+           
+            color: white;
+        }
+        .tooltip3 .tooltiptext{
+            visibility: hidden;
+           
+            color: white;
+            width: 220px;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            /*position the tooltip*/
+            position: absolute;
+            z-index: 1;
+            top:-15px;
+            right:110%;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        .tooltip3 .tooltiptext::after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color:  transparent  transparent transparent white;
+
+
+
+        }
+        .tooltip3:hover .tooltiptext{
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tooltip2{
+            position: relative;
+           left:120px;
+            display: inline-block;
+           
+            color: white;
+        }
+        .tooltip2 .tooltiptext{
+            visibility: hidden;
+           
+            color: white;
+            width: 220px;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            /*position the tooltip*/
+            position: absolute;
+            z-index: 1;
+           
+            bottom:120%;
+            left:0px;
+            opacity: 0;
+          
+            transition: opacity 1s;
+        }
+        .tooltip2 .tooltiptext::after{
+            content: "";
+            position: absolute;
+            top:100%;
+            left: 50%;
+            
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: white transparent   transparent  transparent;
+
+
+
+        }
+        .tooltip2:hover .tooltiptext{
+            visibility: visible;
+            opacity: 1;
+        }
+
+
+       footer{
+            height:fit-content;
+            width:100%;
+        color: white;
+        background-color: black;
+            text-align: center;
+            line-height: 60px;
+           
+             margin-bottom: -30px;
+            margin-left: 10px;
+        }
+        .profile{
+             animation: bounceEffect 1s  infinite alternate;
+             clip-path: ellipse(50% 50% at 50% 50%);
+        }
+        @keyframes bounceEffect{
+            from{
+                transform: translateY(0px);
+                opacity: 0.7;
+            }
+            to{
+               transform: translateY(-7px);
+               opacity: 1;
+            }
+            
+        }
+        .profile:hover{
+           
+            animation: none;
+            cursor: pointer;
+        }
+        .container{
+            margin-top: 100px;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            
+           
+
+        }
+        .footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  
+}
+
+.footer-container .symbol,
+.footer-container .links,
+.footer-container .icons {
+  margin: 10px;
+   cursor: pointer;
+}
+
+
+.footer-container .links a {
+  margin-right: 25px;
+  text-decoration: none;
+  color: white;
+}
+@media screen and (max-width: 600px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  
+   
+  }
+  .tooltip .tooltiptext{
+            visibility: hidden;
+           
+            color: white;
+            width: 220px;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            /*position the tooltip*/
+            position: absolute;
+            z-index: 1;
+           
+             top:-120%;
+            left:0px;
+            opacity: 0;
+          
+            transition: opacity 1s;
+        }
+        .tooltip .tooltiptext::after{
+            content: "";
+            position: absolute;
+            top:100%;
+            left: 50%;
+            
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: white transparent   transparent  transparent;
+
+
+
+        }
+        .tooltip3 .tooltiptext{
+            visibility: hidden;
+           
+            color: white;
+            width: 220px;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            /*position the tooltip*/
+            position: absolute;
+            z-index: 1;
+           
+            top:-120%;
+            left:0px;
+            opacity: 0;
+          
+            transition: opacity 1s;
+        }
+        .tooltip3 .tooltiptext::after{
+            content: "";
+            position: absolute;
+            top:100%;
+            left: 50%;
+            
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: white transparent   transparent  transparent;
+           
+
+
+
+        }
+        
+  .tooltip{
+   
+    margin-top: 180px;
+    margin-bottom: 150px;
+  }
+  .tooltip2{
+    margin: 150px auto;
+    left: 0;
+  }
+  
+  
+    .tooltip3{
+        margin: 150px auto;
+        left: 0;
+    }
+  nav a {
+    display: block; 
+    margin: 5px 0;
+  }
+  .d1 {
+    float: none; 
+    text-align: center;
+  }
+  .header {
+    margin-left: 0; 
+    text-align: center; 
+    float: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+   nav{
+    height: 350px;
+    position: relative;
+    font-size: 12px;
+  }
+   .footer-container .symbol,
+.footer-container .links a,
+.footer-container .icons {
+ margin: 0px auto;
+}
+.footer-container .links a {
+  display: block;
+}
+.footer-container{
+    flex-direction: column;
+}
+  
+    
+}
+
+
+        
+
+    </style>
+</head>
+<body>
+    <nav >
+       
+       
+              <div class="header">
+    <img src="./images/Logo.jpg" height="20px" width="50px" alt="">
+    <h1 style="float: right;margin-left: 20px;"> MyAgency</h1>
+  </div>
+       
+        <div class="d1">
+             <a href="agency.html">HOME</a><a href="service.html">SERVICES</a><a href="about.html">ABOUT US</a><a href="resources.html">RESOURCES</a><a href="contact.html">CONTACT US</a>
+            
+            
+        </div>
+
+    </nav>
+    <div class="head">
+        <h1 style="color:lightgray;">Meet The <span style="color: white;">Team.</span></h1>
+    </div>
+ <div class="tooltip"><img class="profile" src="./images/profile2.webp" height="200px" width="200px" alt="">
+        <span class="tooltiptext">
+            <h1>Founder</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate similique adipisci ut dolor obcaecati, dolore eos, nulla fugiat a aliquam doloremque aut nemo suscipit ea ratione nisi illo magni animi.</p>
+           </span>
+
+    </div>
+    <div
+    class="container">
+    <div class="tooltip2"><img class="profile" src="./images/profile.jpg" height="200px" width="200px" alt="">
+        <span class="tooltiptext">
+            <h1>CEO</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate similique adipisci ut dolor obcaecati, dolore eos, nulla fugiat a aliquam doloremque aut nemo suscipit ea ratione nisi illo magni animi.</p>
+           </span>
+
+    </div>
+    <div class="tooltip3"><img class="profile" src="./images/profile3.jpg" height="200px" width="200px" alt="">
+        <span class="tooltiptext">
+            <h1>LEAD AI</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate similique adipisci ut dolor obcaecati, dolore eos, nulla fugiat a aliquam doloremque aut nemo suscipit ea ratione nisi illo magni animi.</p>
+           </span>
+
+    </div>
+    <div class="tooltip2"><img class="profile" src="./images/profile.jpg" height="200px" width="200px" alt="">
+        <span class="tooltiptext">
+            <h1>CFO</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate similique adipisci ut dolor obcaecati, dolore eos, nulla fugiat a aliquam doloremque aut nemo suscipit ea ratione nisi illo magni animi.</p>
+           </span>
+
+    </div>
+
+</div>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="symbol" style="display: flex;align-items: center;">
+                <img src="./images/Logo.jpg"  height="20px" width="50px" alt="">
+                <h1 > MyAgency</h1>
+               
+    
+    
+    
+            </div>
+            
+            <div class="links">
+                  <a href="agency.html">HOME</a><a href="service.html">SERVICES</a><a href="about.html">ABOUT US</a><a href="resources.html">RESOURCES</a><a href="contact.html">CONTACT US</a>
+            </div>
+            <div class="icons">
+                <img  style="margin-left: 15px;" src="./images/icon1.webp" height="65px" width="65px" alt="">
+                <img  style="margin-left: 15px;" src="./images/icon2.svg" height="65px" width="65px" alt="">
+                 <img  style="margin-left: 15px;" src="./images/icon3.png" height="65px" width="65px" alt="">
+            </div>
+        </div>
+        <p>&copy; MyAgency. All rights reserved 2025
+</p>
+    </footer>
+    
+</body>
+</html>
